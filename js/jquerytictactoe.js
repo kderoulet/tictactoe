@@ -94,9 +94,11 @@ function checkWinner(num) {
         playerWins(num);
     else if (boardState[2] === num && boardState[4] === num && boardState[6] === num)
         playerWins(num);
-    else if (boardState.includes(0) === false)
+}
+function checkTie() {
+    if (boardState.includes(0) === false){
         tie();
-    else return;
+    }
 }
 
 function render() {
@@ -105,6 +107,7 @@ function render() {
     renderBoard();
     checkWinner(1);
     checkWinner(2);
+    checkTie();
 }
 
 function renderBoard() {
