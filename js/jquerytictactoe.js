@@ -60,13 +60,11 @@ if (boardState[num] === 0)
     if (turnCounter % 2 === 1) {
         boardState[num] = 1;
         turnCounter = turnCounter+1
-        console.log(boardState);
         render();
     }
     else {
         boardState[num] = 2;
         turnCounter = turnCounter+1
-        console.log(boardState);
         render();
     }
 else return;
@@ -162,7 +160,7 @@ function updateScore() {
 }
 
 function playerWins(num) {
-    if (num = 1) {
+    if (num === 1) {
         $(".turnCard").html("Player One Wins!")
         firstScore = firstScore +1;
         $('td').off('click');
