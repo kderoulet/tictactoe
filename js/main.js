@@ -4,16 +4,6 @@
 
 // /*----- app's state (variables) -----*/
 
-
-
-// [x, x, x, 0, 0, 0, 0, 0, 0]
-// [0, 0, 0, x, x, x, 0, 0, 0]
-// [0, 0, 0, 0, 0, 0, x, x, x]
-// [x, 0, 0, x, 0, 0, x, 0, 0]
-// [0, x, 0, 0, x, 0, 0, x, 0]
-// [0, 0, x, 0, 0, x, 0, 0, x]
-// [x, 0, 0, 0, x, 0, 0, 0, x]
-// [0, 0, x, 0, x, 0, x, 0, 0]
 var newLetter;
 var score = [0, 0];
 var boardState = [];
@@ -72,7 +62,6 @@ function nextTurn()
 
 function render() {
     updateBoard();
-    console.log(boardState);
     checkWinnerOne();
     checkWinnerTwo();
     checkCatsGame();
@@ -256,7 +245,6 @@ function updateBoard() {
         boardState[8] = 1;}
     else if (document.querySelector("#br").textContent === "o") {
         boardState[8] = 2;};
-    
 }
 
 function resetButton() {
